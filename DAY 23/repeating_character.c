@@ -1,0 +1,26 @@
+//WRITE A PROGRAM TO FIND REPEATING CHARACTER 
+#include<stdio.h>
+
+int main(){
+    char str[25];
+    int count;
+    printf("Enter a string : ");
+    scanf("%s",str);
+    
+    for(int i = 0; str[i] != '\0'; i++){
+        count = 0;
+        for(int j = 0; str[j] != '\0'; j++){
+            if(str[i] == str[j]){
+                count++;
+            }
+        }
+
+        if(count > 1){
+            printf("First repeating character = %c",str[i]);
+            return 0;
+        }
+    }
+
+    printf("No repeating character found");
+    return 0;
+}
